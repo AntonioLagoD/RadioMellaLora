@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <Wire.h> 
-#include "SSD1306Wire.h"  
+#include "SSD1306wire.h"  
 #include "oled.h"
 
 SSD1306Wire display(OLED_ADDR, OLED_SDA, OLED_SCL); // Objeto pantalla OLED
