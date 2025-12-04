@@ -87,7 +87,9 @@ void setup()
   }
   // Provisionado de claves ABP
   else {
-	  estadoLoRa = node.beginABP(devAddr, fNwkSIntKey, sNwkSIntKey, nwkSEncKey, appSKey);
+	estadoLoRa = node.beginABP(devAddr, NULL, NULL, nwkSEncKey, appSKey);
+	//Para LORAWAN 1.1.0
+	//estadoLoRa = node.beginABP(devAddr, fNwkSIntKey, sNwkSIntKey, nwkSEncKey, appSKey);
     if ( estadoLoRa == RADIOLIB_ERR_NONE ) {
       Serial.println("Provisionado de claves ABP OK");
 	  }
